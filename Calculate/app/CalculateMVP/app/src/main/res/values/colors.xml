@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="activate_answer">#40000000</color>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="unable_state">#EAEAEA</color>
+    <color name="basic">#D6D7D7</color>
+    <color name="correct_color">#38D579</color>
+    <color name="problem_color">#6799FF</color>
+    <color name="brown">#D5A635</color>
+    <color name="in_correct_color">#FF884D</color>
+</resources>

@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">MVP</string>
+    <string name="drawer_open">Open navigation</string>
+    <string name="drawer_close">Close navigation</string>
+
+    <string name="check_answer">정답확인</string>
+    <string name="enter_answer_hint">정답입력</string>
+    <string name="next_problem">다음문제</string>
+    <string name="finish_lesson">학습완료</string>
+    <string name="calculator_chance_format">찬스 : </string>
+    <string name="calculator_chance">계산기찬스</string>
+    <string name="calculator_chance_hint">계산기종료</string>
+    <string name="question_form">다음 문제를 계산하시오.\n\n %1$s</string>
+    <string name="question_format">다음 문제를 계산하시오.\n\n xxx + xxx = ?</string>
+
+    <string name="test"><![CDATA[Within this Character Data block I can><><><><><><><><><><><><<><><><><>><<><><><><><><>,,.]]></string>
+
+
+</resources>

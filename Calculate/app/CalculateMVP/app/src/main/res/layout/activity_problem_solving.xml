@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/problem_solving"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true"
+    tools:context=".view.problemSolving.ProblemSolvingActivity">
+
+    <TextView
+        android:id="@+id/tv_lesson_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/pg_problem_solving_progress"
+        app:layout_constraintStart_toEndOf="@+id/iv_problem_number_box"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/pg_problem_solving_progress"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="18dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="16dp"
+        android:max="0"
+        android:progress="0"
+        android:progressDrawable="@drawable/custom_progressbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_problem_number_box" />
+
+    <TextView
+        android:id="@+id/iv_problem_number_box"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="15dp"
+        android:background="@color/problem_color"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_problem_content"
+        android:layout_width="323dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:paddingBottom="30dp"
+        app:layout_constraintEnd_toEndOf="@id/pg_problem_solving_progress"
+        app:layout_constraintTop_toTopOf="@+id/pg_problem_solving_progress" />
+
+    <EditText
+        android:id="@+id/et_answer_input"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/basic"
+        android:gravity="center"
+        android:hint="@string/enter_answer_hint"
+        android:inputType="number"
+        android:maxLines="1"
+        app:layout_constraintEnd_toEndOf="@id/pg_problem_solving_progress"
+        app:layout_constraintTop_toBottomOf="@id/tv_problem_content" />
+
+    <Button
+        android:id="@+id/btn_check_answer"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/check_answer"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="@id/pg_problem_solving_progress"
+        app:layout_constraintTop_toBottomOf="@+id/et_answer_input" />
+
+    <ImageView
+        android:id="@+id/iv_symbol_answer_result"
+        android:layout_width="54dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="@+id/et_answer_input"
+        app:layout_constraintStart_toStartOf="@+id/et_answer_input"
+        app:layout_constraintTop_toBottomOf="@+id/btn_check_answer" />
+
+    <Button
+        android:id="@+id/btn_proceed_next"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="30dp"
+        android:layout_marginEnd="30dp"
+        android:background="@color/brown"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/btn_move_calculator"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="80dp"
+        android:hint="@string/calculator_chance_hint"
+        android:text="@string/calculator_chance"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="@+id/pg_problem_solving_progress"
+        app:layout_constraintTop_toBottomOf="@+id/tv_problem_content" />
+
+    <TextView
+        android:id="@+id/tv_calculator_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_move_calculator"
+        app:layout_constraintEnd_toEndOf="@+id/btn_move_calculator"
+        app:layout_constraintStart_toStartOf="@+id/btn_move_calculator" />
+
+    <ScrollView
+        android:id="@+id/sv_result_tag_scroll_view"
+        android:layout_width="175dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="30dp"
+        android:layout_marginStart="30dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_problem_answer_result_tag"
+            style="@style/NomalSize"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginBottom="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/pg_problem_solving_progress"
+            tools:listitem="@layout/item_problem_solving_result_tag" />
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>
