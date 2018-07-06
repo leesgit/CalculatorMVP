@@ -175,12 +175,12 @@ class ProblemSolvingActivity : DaggerAppCompatActivity(), ProblemSolvingContract
         problemPresenter.unsubscribe()
         music.mainsongStop()
     }
-
     override fun onRestart() {
         super.onRestart()
         problemPresenter.rxChange(event!!)
         music.mainsongStart(this,resouceMain)
     }
+
 
     override fun onStop() {
         super.onStop()

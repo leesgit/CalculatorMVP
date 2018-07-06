@@ -40,7 +40,7 @@ public class RetrofitManager {
     interface RetrofitUrl {
 
         companion object {
-            val BASE_URL = "http://172.30.1.37:8080"
+            val BASE_URL = "http://"
         }
 
         @POST("/cal/calculator/getproblem")
