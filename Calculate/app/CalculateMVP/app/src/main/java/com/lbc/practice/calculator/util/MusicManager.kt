@@ -43,6 +43,8 @@ class MusicManager {
     fun calSongStart(ctx: Context, res: Int) {
         if (logosong == null) {
             logosong = MediaPlayer.create(ctx, res)
+        } else {
+            logosong!!.prepare()
         }
         logosong!!.start()
         logosong!!.isLooping = true
@@ -57,6 +59,8 @@ class MusicManager {
     fun mainsongStart(ctx: Context, res: Int) {
         if (mainsong == null) {
             mainsong = MediaPlayer.create(ctx, res)
+        } else {
+            mainsong!!.prepare()
         }
         mainsong!!.start()
         mainsong!!.isLooping = true

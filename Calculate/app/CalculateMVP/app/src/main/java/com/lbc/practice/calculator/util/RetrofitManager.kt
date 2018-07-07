@@ -40,7 +40,7 @@ public class RetrofitManager {
     interface RetrofitUrl {
 
         companion object {
-            val BASE_URL = "http://"
+            val BASE_URL = "http://172.30.1.6:8080" //우리집 ip주소 아닙니다.
         }
 
         @POST("/cal/calculator/getproblem")
